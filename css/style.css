@@ -16,7 +16,7 @@ body {
 }
 
 .slider-img .images {
-    height: 600px;
+    height: 100vh;
 }
 
 .slider-img .images img {
@@ -36,11 +36,11 @@ body {
     line-height: 60px;
     text-align: center;
     font-size: 30px;
-    color: #fff;
+    color: rgba(255,255,255, .8);
     background: rgba(0,0,0, .7);
     border-radius: 50%;
     cursor: pointer;
-    transition: background .3s;
+    transition: .3s;
 }
 
 .prev-icon{
@@ -52,6 +52,7 @@ body {
 }
 
 .prev-icon:hover, .next-icon:hover {
+    color: #fff;
     background: #000;
 }
 

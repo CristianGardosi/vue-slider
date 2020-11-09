@@ -16,18 +16,21 @@
 
 <body>
     <!-- Sezione dentro alla quale lavoro con Vuejs -->
-    <div class="vuejs-slider">
+    <div id="vuejs-slider">
         <div class="slider-img">
-            <div class="prev-icon">
+            <!-- Associo alla freccia sx, grazie all'evento Vue @click, la funzione relativa che permette di diminuire di uno l'index dell'immagine passando quindi alla precedente -->
+            <div class="prev-icon" @click="prevPhoto">
                 <!-- Freccia sx -->
                 <i class="fas fa-arrow-left"></i>
             </div>
             <!-- Sezione per inserimento e gestione immagini -->
             <div class="images">
-                <img src="./img/image1.jpg" alt="">
+                <!-- Non ho più un src statico, ma dinamico associato al mio array di foto contenuto nei data di Vue. Utilizzo v-bind per associarmi al suddetto array, ne indico il nome all'interno di src e come contatore dell'array utilizzo il mio indexPhoto dinamico che parte da 0 -->
+                <img v-bind:src="photos[indexPhoto]" alt="">
             </div>
             <!-- Freccia dx -->
-            <div class="next-icon">
+            <!-- Associo alla freccia dx, grazie all'evento Vue @click, la funzione relativa che permette di aumentare di uno l'index dell'immagine passando quindi alla successiva -->
+            <div class="next-icon" @click="nextPhoto">
                 <i class="fas fa-arrow-right"></i>
             </div>
             <!-- Navigazione a pallini -->
