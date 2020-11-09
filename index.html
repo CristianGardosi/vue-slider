@@ -17,7 +17,7 @@
 <body>
     <!-- Sezione dentro alla quale lavoro con Vuejs -->
     <div id="vuejs-slider">
-        <!-- Con l'evento @mouseenter in questo punto gestisco l'interruzione del mio loop di scorrimento immagini ogni 3 secondi quando l'utente va in over sullo slider di immagini e il suo procedere quando l'utente non è in hover. Nella seconda parte mi occupo della gestione dello slider immagini mediante le frecce da tastiera sx e dx associando l'event @keyup ed i relativi tasti alle funzioni che ho creato nella sezione methods di Vue -->
+        <!-- Con l'evento @mouseenter in questo punto gestisco l'interruzione del mio loop di scorrimento immagini ogni 3 secondi quando l'utente va in over sullo slider di immagini e il suo procedere quando l'utente non è in hover. Nella seconda parte mi occupo della gestione dello slider immagini mediante le frecce da tastiera sx e dx associando l'event @keyup ed i relativi tasti alle funzioni che ho creato nella sezione methods di Vue. Tabindex serve per far funzionare questa specifica quando si ha il focus sullo slider -->
         <div class= "slider-img" @mouseenter= "stopLoop" @mouseleave= "startLoop"
 
         @keyup.arrow-left= "prevPhoto"
