@@ -35,9 +35,9 @@
             </div>
             <!-- Navigazione a pallini -->
             <div class="circles-nav">
-                <!-- Dato che voglio tanti pallini quante sono le immagini, utilizzo v-for. Passo come parametri element(photo) e l'index degli elementi contenuti nell'array photos che targhettizzo. Ci serve un ulteriore controllo sempre basato sull'indice per assegnare la classe active al circle selezionato e lo faccio con l'operatore ternario che mi permette di dire se è cosi fai questo se non è cosi fai quell'altro. Per mergiare le due classi con una sintassi semplificato utilizzo la sintassi array per le classi -->
+                <!-- Dato che voglio tanti pallini quante sono le immagini, utilizzo v-for. Passo come parametri element(photo) e l'index degli elementi contenuti nell'array photos che targhettizzo. Ci serve un ulteriore controllo sempre basato sull'indice per assegnare la classe active al circle selezionato e lo faccio con l'operatore ternario che mi permette di dire se è cosi fai questo se non è cosi fai quell'altro. Per 'mergiare' le classi dinamiche e statiche con una sintassi semplificata utilizzo []. Infine con @click associo al click sul circle l'img con index corrispondente grazie alla funzione che ho creato nei methods -->
                 <i v-for="(photo, index) in photos"
-                v-bind:class="['far fa-circle', index === indexPhoto ? 'active' : '']"></i>
+                v-bind:class="['far fa-circle', index === indexPhoto ? 'active' : '']" @click="setPhoto(index)"></i>
             </div>
         </div>
     </div>

@@ -36,5 +36,9 @@ const slider = new Vue({
                 this.indexPhoto = this.photos.length - 1;
             } 
         },
+        // Associare il click sul circle alla foto corrispondente, come parametro utilizzo per l'appunto index che è ciò che mi permette di fatto quest'associazione. 
+        setPhoto(index) {
+            this.indexPhoto = index;
+        }
     }
 });
