@@ -1,0 +1,86 @@
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Goldman', cursive;
+}
+
+/* SLIDER STYLES */
+/* Do pos relative al container in modo da posizionare w/absolute le frecce sx/dx e i circles per la navigazione */
+.slider-img {
+    position: relative;
+}
+
+.slider-img .images {
+    height: 600px;
+}
+
+.slider-img .images img {
+    width: 100%;
+    height: 100%;
+    /* Avendo una dimensione del contenitore fissa e w/h 100% utilizzo questa proprietà per 'fittare' l'img senza che si stretchi e che resti ok anche quando rimpicciolisco la pagina */
+    object-fit: cover;
+}
+
+/* Frecce sx dx */
+.prev-icon, .next-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0,0,0, .7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.prev-icon{
+    left: 30px;
+}
+
+.next-icon{
+    right: 30px;
+}
+
+.prev-icon:hover, .next-icon:hover {
+    background: #000;
+}
+
+/* Circles nav */
+.circles-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 50px;
+    left: 50%;
+    padding: 0 15px;
+    transform: translateX(-50%);
+    background: rgba(0,0,0, .7);
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.circles-nav i {
+    color: rgba(255,255,255, .6);
+    transition: color, .3s;
+    cursor: pointer;
+}
+
+.circles-nav i:hover{
+    color: #fff;
+}
+
+.circles-nav i.active {
+    color: maroon;
+}
