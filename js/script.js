@@ -35,6 +35,6 @@ const slider = new Vue({
             if(this.indexPhoto < 0) {
                 this.indexPhoto = this.photos.length - 1;
             } 
-        }
+        },
     }
 });
